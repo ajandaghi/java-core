@@ -44,12 +44,12 @@
         <repository>
             <id>deployment</id>
             <name>deployment</name>
-            <url>https://github.com/ajandaghi/releases.git</url>
+            <url>https://github.com/ajandaghi/releases/blob/main/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-            <url>https://github.com/ajandaghi/snapshots.git</url>
+            <url>https://github.com/ajandaghi/snapshots/blob/main/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
