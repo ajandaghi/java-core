@@ -43,10 +43,9 @@
 <!--    </scm>-->
 
     <scm>
-        <connection>scm:git:${project.scm.url}</connection>
-        <developerConnection>scm:git:${project.scm.url}</developerConnection>
-        <url>https://github.com/releases.git</url>
-        <tag>HEAD</tag>
+        <connection>scm:git:https://github.com/ajandaghi/java-core.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/ajandaghi/java-core.git</developerConnection>
+        <url>https://github.com/ajandaghi/java-core</url>
     </scm>
 <build>
     <plugins>
