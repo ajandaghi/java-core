@@ -46,7 +46,7 @@
         <connection>scm:git:https://github.com/ajandaghi/java-core.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ajandaghi/java-core.git</developerConnection>
         <url>https://github.com/ajandaghi/java-core</url>
-      <tag>1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 <build>
     <plugins>
