@@ -36,6 +36,12 @@
 
 
     </dependencies>
+    <scm>
+        <url>https://github.com/ajandaghi/java-core.git</url>
+        <connection>scm:git:https://github.com/ajandaghi/java-core.git</connection>
+        <developerConnection>scm:git:https://github.com/ajandaghi/java-core.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <distributionManagement>
         <repository>
             <id>deployment</id>
