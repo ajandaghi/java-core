@@ -60,17 +60,16 @@
     </plugin>
     </plugins>
 </build>
-
     <distributionManagement>
         <repository>
             <id>deployment</id>
             <name>deployment</name>
-            <url>https://github.com/ajandaghi/releases/</url>
+            <url>https://maven.pkg.github.com/ajandaghi/releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-            <url>https://github.com/ajandaghi/snapshots/</url>
+            <url>https://maven.pkg.github.com/ajandaghi/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
