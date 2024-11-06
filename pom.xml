@@ -62,14 +62,14 @@
 </build>
     <distributionManagement>
         <repository>
-            <id>deployment</id>
-            <name>deployment</name>
+            <id>github</id>
+            <name>ajandaghi</name>
             <url>https://maven.pkg.github.com/ajandaghi/releases/</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>snapshots</name>
-            <url>https://maven.pkg.github.com/ajandaghi/snapshots/</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots</id>-->
+<!--            <name>snapshots</name>-->
+<!--            <url>https://maven.pkg.github.com/ajandaghi/snapshots/</url>-->
+<!--        </snapshotRepository>-->
     </distributionManagement>
 </project>
