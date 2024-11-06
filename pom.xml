@@ -80,13 +80,13 @@
 </build>
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <name>releases</name>
+            <id>github</id>
+            <name>ajandaghi</name>
             <url>https://maven.pkg.github.com/ajandaghi/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>snapshots</name>
+            <id>github</id>
+            <name>ajandaghi</name>
             <url>https://maven.pkg.github.com/ajandaghi/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
