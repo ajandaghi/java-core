@@ -4,12 +4,13 @@
 
     <groupId>org.example</groupId>
     <artifactId>java-core</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -34,22 +35,29 @@
 
 
     </dependencies>
+<!--    <scm>-->
+<!--        <url>https://github.com/ajandaghi/java-core.git</url>-->
+<!--        <connection>scm:git:https://github.com/ajandaghi/java-core.git</connection>-->
+<!--        <developerConnection>scm:git:https://github.com/ajandaghi/java-core.git</developerConnection>-->
+<!--        <tag>HEAD</tag>-->
+<!--    </scm>-->
     <scm>
-        <url>https://github.com/ajandaghi/java-core.git</url>
-        <connection>scm:git:https://github.com/ajandaghi/java-core.git</connection>
-        <developerConnection>scm:git:https://github.com/ajandaghi/java-core.git</developerConnection>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <url>git@github.com:ajandaghi/releases.git</url>
         <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>deployment</name>
-            <url>https://github.com/ajandaghi/releases/blob/main/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>snapshots</name>
-            <url>https://github.com/ajandaghi/snapshots/blob/main/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
+<build>
+    <plugins>
+    <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${maven-release-plugin.version}</version>
+        <configuration>
+            <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+            <tagNameFormat>@{project.version}</tagNameFormat>
+        </configuration>
+    </plugin>
+    </plugins>
+</build>
 </project>
