@@ -36,5 +36,16 @@
 
 
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>deployment</id>
+            <name>deployment</name>
+            <url>https://github.com/ajandaghi/ProductsVersion.git</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>https://github.com/ajandaghi/ProductsVersion.git</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
