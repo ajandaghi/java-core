@@ -15,17 +15,20 @@ public class MainMenu {
         // List<String> pck= Package.getPackages()
         Reflections reflection = new Reflections("", ClassLoader.getSystemClassLoader(), new SubTypesScanner(false));
         Set<Class<?>> classes = reflection.getSubTypesOf(Object.class);
-        List<String> mainList = classes.stream().map(a->a.getName()).collect(toList());
+        List<String> mainList = classes.stream().map(a->a.getName()).sorted().collect(toList());
         String input ="";
-        while(!input.equals("0")) {
+        while(true) {
                 System.out.println();
                 System.out.println("select class number");
                 System.out.println("0 " + "exit");
                 mainList.forEach(a -> {if(!a.contains("MainMenu")){System.out.println(mainList.indexOf(a) + 1 + " " + a.split("\\.")[a.split("\\.").length - 1]);}});
                 input = scanner.nextLine();
-
+            if(input.equals("0"))
+            {
+                System.exit(0);
+            }
             String finalInput = input;
-            classes.stream().map(a -> a.getName()).filter(a -> a.contains(mainList.get(Integer.parseInt(finalInput)-1))).findFirst()
+            classes.stream().sorted().map(a -> a.getName()).filter(a -> a.contains(mainList.get(Integer.parseInt(finalInput)-1))).findFirst()
                     .ifPresent(a -> {
                         Class c = null; // if you want to specify a class
                         try {
