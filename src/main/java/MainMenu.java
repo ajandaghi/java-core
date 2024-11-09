@@ -28,7 +28,7 @@ public class MainMenu {
                 System.exit(0);
             }
             String finalInput = input;
-            classes.stream().sorted().map(a -> a.getName()).filter(a -> a.contains(mainList.get(Integer.parseInt(finalInput)-1))).findFirst()
+            classes.stream().map(a -> a.getName()).sorted().filter(a -> a.contains(mainList.get(Integer.parseInt(finalInput)-1))).findFirst()
                     .ifPresent(a -> {
                         Class c = null; // if you want to specify a class
                         try {
