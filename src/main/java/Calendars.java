@@ -108,7 +108,7 @@ public class Calendars {
 
     public String gregorian2Hijri(String gregorian) throws ParseException {
         Date date=(new SimpleDateFormat("yyyy/MM/dd")).parse(gregorian);
-        LocalDate localDate=date.toInstant().atZone(ZoneId.of("Asia/Tehran")).toLocalDate();
+        LocalDate localDate=date.toInstant().atZone(ZoneId.of("Asia/Riyadh")).toLocalDate();
         HijrahDate hijri=HijrahDate.from(localDate);
         return hijri.get(ChronoField.YEAR) + "/" + (hijri.get(ChronoField.MONTH_OF_YEAR) ) + "/" + hijri.get(ChronoField.DAY_OF_MONTH);
     }
