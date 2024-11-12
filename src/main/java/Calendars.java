@@ -100,10 +100,10 @@ public class Calendars {
     }
 
     public String hijri2Gregorian(String hijr) throws ParseException {
-        HijrahDate hijrahDate=HijrahDate.of(Integer.parseInt(hijr.split("/")[0]), Integer.parseInt(hijr.split("/")[1])-1, Integer.parseInt(hijr.split("/")[2]));
+        HijrahDate hijrahDate=HijrahDate.of(Integer.parseInt(hijr.split("/")[0]), Integer.parseInt(hijr.split("/")[1]), Integer.parseInt(hijr.split("/")[2]));
 
         LocalDate localDate=(IsoChronology.INSTANCE.date(hijrahDate));
-        return  localDate.getYear()+ "/" + (localDate.get(ChronoField.MONTH_OF_YEAR)+1) + "/" + localDate.getDayOfMonth();
+        return  localDate.getYear()+ "/" + (localDate.get(ChronoField.MONTH_OF_YEAR)) + "/" + localDate.getDayOfMonth();
     }
 
     public String gregorian2Hijri(String gregorian) throws ParseException {
