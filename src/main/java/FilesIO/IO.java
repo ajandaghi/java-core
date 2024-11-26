@@ -13,7 +13,7 @@ public class IO {
     public static void main(String[] args) throws IOException {
        Path path0= Files.walk(Paths.get(System.getProperty("user.dir"))).filter(a->a.getFileName().toString().equals("test.xml")).findFirst().get();
         String desktopPath =System.getProperty("user.home") + "\\"+"Desktop\\test1.xml";
-        Files.copy(path0.getFileName().toAbsolutePath(),Paths.get(desktopPath));
+        Files.copy(path0.toAbsolutePath(),Paths.get(desktopPath));
     }
 
 }
